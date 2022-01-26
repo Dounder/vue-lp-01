@@ -2,17 +2,16 @@
 import { createStore } from 'vuex';
 
 // My custom modules
-// import exampleModule from './module-template';
-// import { ExampleStateInterface } from './module-template/state';
+import module from './module';
+import { ModuleStateInterface } from './module/state';
 
 
 export interface StateInterface {
-    // example: ExampleStateInterface
-    example: unknown;
+    module: ModuleStateInterface;
 }
 
 export default createStore<StateInterface>({
     modules: {
-        // example: exampleModule
+        module
     }
 })
